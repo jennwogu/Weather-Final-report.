@@ -1,0 +1,7 @@
+import pandas as pd
+import seaborn as sns
+sns.set(color_codes=True)
+weather = pd.read_csv('Test.csv')
+weather.head()
+weather.info()
+sns.lmplot(x="humidity", y="temperature", hue="weather_type", data=weather)
